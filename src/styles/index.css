@@ -1,0 +1,144 @@
+/* Importa Google Fonts antes de cualquier regla */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+:root {
+  --font-primary: 'Exo 2', sans-serif;
+  --color-bg: #111419; /* Deep brown-black base */
+  --color-contrast: #ffffff; /* Warm cream for text */
+  --color-accent: #ebc44e; /* Primary copper tone */
+  --color-accent-light: #ebc44e; /* Lighter copper */
+  --color-accent-dark: #ebc44e; /* Darker copper */
+  --color-gradient-start: #303030; /* Copper */
+  --color-gradient-end: #4a4a4a; /* Rust */
+  --transition-fast: 0.3s ease-in-out;
+  --transition-slow: 0.6s ease;
+  
+  /* Copper palette extras */
+  --color-surface: #212121; /* Dark brown surface */
+  --color-border: #111419; /* Copper patina border */
+  --color-hover: #111419; /* Hover state */
+  --color-muted: #9a864a; /* Muted brown-gray */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--color-bg);
+  color: var(--color-contrast);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-accent-light);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-shadow: 0 0 8px rgba(217, 130, 54, 0.3);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+main {
+  padding: 2rem;
+  background: var(--color-bg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Copper-themed typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-accent-light);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 3rem;
+}
+
+p {
+  color: var(--color-contrast);
+  margin-bottom: 1.5rem;
+}
+
+/* Copper surface elements */
+.surface {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Interactive elements */
+button, .button {
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+  color: var(--color-contrast);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+button:hover, .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(217, 130, 54, 0.4);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-light);
+}
+
+/* Special copper accents */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Copper glow effect */
+.glow-effect {
+  transition: box-shadow var(--transition-slow);
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 20px rgba(217, 130, 54, 0.6);
+}
+/*
+Sirve para animar el texto de la sección de servicios, productos y footer
+*/
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
