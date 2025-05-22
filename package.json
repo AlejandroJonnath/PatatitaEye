@@ -1,10 +1,11 @@
 {
-  "name": "the-eye",
+  "name": "patata",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "homepage": "https://AlejandroJonnath.github.io/PatatitaEye",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
